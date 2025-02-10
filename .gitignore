@@ -1,0 +1,23 @@
+# Node.js dependencies 
+node_modules/ 
+package-lock.json 
+yarn.lock 
+
+# Playwright reports & test artifacts 
+playwright-report/ 
+test-results/ 
+*.log 
+*.trace 
+*.png
+.cache/
+
+# Environment variables & sensitive data 
+.env 
+
+# VS Code settings & user-specific files 
+.vscode/ 
+*.code-workspace 
+
+# TypeScript build artifacts 
+dist/ 
+*.tsbuildinfo 
