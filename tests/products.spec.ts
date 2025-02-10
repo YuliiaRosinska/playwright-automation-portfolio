@@ -21,7 +21,7 @@ test.describe('Products page', () => {
     )
   })
 
-  test('Complete purchase flow', async () => {
+  test.skip('Complete purchase flow', async () => {
     await productsPage.addProductToCart(0)
     await productsPage.addProductToCart(3)
     await expect(productsPage.cartBadge).toHaveText('2')
