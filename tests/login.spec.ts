@@ -14,7 +14,7 @@ test.describe('Login page', () => {
     await loginPage.navigate()
   })
 
-  test('Successful login', async () => {
+  test('[TC-1] Successful login', async () => {
     await loginPage.login(
       credentials.standard_user.username,
       credentials.standard_user.password,
@@ -22,28 +22,28 @@ test.describe('Login page', () => {
     await expect(productsPage.inventoryList).toBeVisible()
   })
 
-  test('Login with empty username', async () => {
+  test('[TC-2] Login with empty username', async () => {
     await loginPage.login('', '')
     await expect(loginPage.errorMessage).toHaveText(
       'Epic sadface: Username is required',
     )
   })
 
-  test('Login with empty password', async () => {
+  test('[TC-3] Login with empty password', async () => {
     await loginPage.login(credentials.standard_user.username, '')
     await expect(loginPage.errorMessage).toHaveText(
       'Epic sadface: Password is required',
     )
   })
 
-  test('Login with invalid credentials', async () => {
+  test('[TC-4] Login with invalid credentials', async () => {
     await loginPage.login(credentials.standard_user.username, 'wrong_password')
     await expect(loginPage.errorMessage).toHaveText(
       'Epic sadface: Username and password do not match any user in this service',
     )
   })
 
-  test('Login with loched out user', async () => {
+  test('[TC-5] Login with loched out user', async () => {
     await loginPage.login(
       credentials.locked_out_user.username,
       credentials.locked_out_user.password,
