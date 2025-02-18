@@ -15,11 +15,13 @@ This project automates key **E2E user flows** for the **Sauce Demo** e-commerce 
 - tests
   - login.spec.ts
   - cart.spec.ts
+  - ...
 - pages (POM)
   - LoginPage.ts
   - ProductsPage.ts
+  - ...
 - config
-  - auth.config.ts #Credentials & test data
+  - auth.config.ts
   - playwright.config.ts
 - package.json
 
@@ -28,11 +30,11 @@ This project automates key **E2E user flows** for the **Sauce Demo** e-commerce 
 ### 1️⃣ Clone the repository
 
 ```sh
-git clone https://github.com/your-username/playwright-automation.git
+git clone https://github.com/YuliiaRosinska/playwright-automation-portfolio.git
 ```
 
 ```sh
-cd playwright-automation
+cd playwright-automation-portfolio
 ```
 
 ### 2️⃣ Install dependencies
@@ -63,26 +65,3 @@ Run a specific test file
 ```sh
 npx playwright test tests/login.spec.ts
 ```
-
-## E2E Test Scenarios
-
-### Login Flow
-
-• ✅ test_successful_login_with_valid_credentials
-
-• ❌ test_login_with_invalid_password_fails
-
-• 🔒 test_redirect_to_login_when_accessing_cart_without_authentication
-
-### Shopping Cart & Checkout
-
-• 🛒 test_add_product_to_cart
-
-• ❌ test_removed_product_not_in_checkout
-
-• 💳 test_complete_purchase_flow
-
-## 🏗 Project Enhancements (Future Work)
-
-- [ ] Integrate Allure Reporting for test insights 📊
-- [ ] Implement CI/CD with GitHub Actions 🚀
